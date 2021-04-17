@@ -46,5 +46,5 @@ class Librery(Composer,Compositions):
             del self.ListCompositions[locatedel]
             print("Deleted work correctly!")
         else:
-            print("Work not found!")
+            print("Obra no encontrada!")
         
