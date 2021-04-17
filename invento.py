@@ -34,5 +34,17 @@ class Librery(Composer,Compositions):
         for item in self.ListCompositions:
             item.SeeComposition()
         print("###########################")
-    
+    def DelComposition(self, title):
+        locate = False
+        locatedel = -1
+        for item in self.ListCompositions:
+            locatedel += 1
+            if item.GetTitle() == title:
+                locate = True
+                break
+        if locate:
+            del self.ListCompositions[locatedel]
+            print("Deleted work correctly!")
+        else:
+            print("Work not found!")
         
