@@ -61,8 +61,11 @@ def AddCompositionLibrery(librery):
     instrumentation = input("Enter the instrumentation: ")
     composername = input("Enter the name to composer: ")
     composerlastname = input("Enter the last name to composer: ")
-    composer = Composer(composername, composerlastname)
-    composition = Compositions(title, instrumentation)
+    nationalitycomposer = input("Enter  the nationality to composer: ")
+    periodcomposer = input("Enter the period to composer: ")
+    tipecomposition = input("Enter the tipe composition: ")
+    composer = Composer(composername, composerlastname, nationalitycomposer, periodcomposer)
+    composition = Compositions(title, instrumentation,  tipecomposition)
     composition.AddComposer(composer)
     librery.AddComposition(composition)
     return librery
