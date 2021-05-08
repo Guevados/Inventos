@@ -27,7 +27,7 @@ class Librery(Composer,Compositions):
         self.ListCompositions = []
     def NumsCompositions(self):
         return len(self.ListCompositions)
-    def AddComposition(self, title):
+    def AddComposition(self, Compositions):
         self.ListCompositions = self.ListCompositions + [Compositions]
     def SeeLibrery(self):
         print("###########################")
@@ -36,14 +36,14 @@ class Librery(Composer,Compositions):
         print("###########################")
     def DelComposition(self, title):
         locate = False
-        locatedel = -1
+        del_locate = -1
         for item in self.ListCompositions:
-            locatedel += 1
+            del_locate += 1
             if item.GetTitle() == title:
                 locate = True
                 break
         if locate:
-            del self.ListCompositions[locatedel]
+            del self.ListCompositions[del_locate]
             print("Deleted work correctly!")
         else:
             print("Work not found!")
@@ -69,6 +69,7 @@ def AddCompositionLibrery(librery):
     composition.AddComposer(composer)
     librery.AddComposition(composition)
     return librery
+
 def SeeLibrery(librery):
     librery.SeeLibrery()
 
@@ -76,8 +77,8 @@ def DelComposition(librery):
     title = input("Enter the titleof the composition to delete: ")
     librery.DelComposition(title)
 
-def NumsComposition(librery):
-    print("The numbers of compositions in the librery is: ",librery.NumsComposition())
+def NumsCompositions(librery):
+    print("The numbers of compositions in the librery is: ", librery.NumsCompositions())
 
 end = False
 librery = Librery()
@@ -92,7 +93,7 @@ while not end:
     elif(opc == 3):
         DelComposition(librery)
     elif(opc == 4):
-        NumsComposition(librery)
+        NumsCompositions(librery)
     elif(opc == 5):
         end = True
 
