@@ -76,8 +76,8 @@ def DelComposition(librery):
     title = input("Enter the titleof the composition to delete: ")
     librery.DelComposition(title)
 
-def NumsComposition(librery):
-    print("The numbers of compositions in the librery is: ",librery.NumsComposition())
+def NumsCompositions(librery):
+    print("The numbers of compositions in the librery is: ",librery.NumsCompositions())
 
 end = False
 librery = Librery()
@@ -92,7 +92,7 @@ while not end:
     elif(opc == 3):
         DelComposition(librery)
     elif(opc == 4):
-        NumsComposition(librery)
+        NumsCompositions(librery)
     elif(opc == 5):
         end = True
 
