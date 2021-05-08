@@ -79,6 +79,7 @@ def DelComposition(librery):
 
 def NumsCompositions(librery):
     print("The numbers of compositions in the librery is: ", librery.NumsCompositions())
+    #arreglo de esta funcion
 
 end = False
 librery = Librery()
