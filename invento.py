@@ -5,7 +5,7 @@ class Composer:
         self.Nationality = nationality
         self.Period = period
     def SeeComposer(self):
-        print("Composer: ",self.Name," ",self.LastName," ",self.Nationality," ",self.Period)
+        print("Composer: ",self.Name," ",self.LastName,"\nNationality: ",self.Nationality,"\nPeriod: ",self.Period)
 
 class Compositions:
     def __init__(self, title, instrumentation, tipe):
