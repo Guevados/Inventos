@@ -30,10 +30,10 @@ class Librery(Composer,Compositions):
     def AddComposition(self, Compositions):
         self.ListCompositions = self.ListCompositions + [Compositions]
     def SeeLibrery(self):
-        print("###########################")
+        print("____________________________")
         for item in self.ListCompositions:
             item.SeeComposition()
-        print("###########################")
+            print("____________________________")
     def DelComposition(self, title):
         locate = False
         del_locate = -1
