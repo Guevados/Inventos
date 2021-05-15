@@ -8,16 +8,16 @@ class Composer:
         print("Composer: ",self.Name," ",self.LastName,"\nNationality: ",self.Nationality,"\nPeriod: ",self.Period)
 
 class Compositions:
-    def __init__(self, title, instrumentation, tipe):
+    def __init__(self, title, instrumentation, type):
         self.Title = title
         self.Instrumentation = instrumentation
-        self.Tipe = tipe
+        self.Type = type
     def AddComposer(self, composer):
         self.Composer = composer
     def SeeComposition(self):
         print("Title: ", self.Title)
         print("Instrumentation ",self.Instrumentation)
-        print("Tipe ",self.Tipe)
+        print("Type ",self.Type)
         self.Composer.SeeComposer()
     def GetTitle(self):
         return self.Title
@@ -63,9 +63,9 @@ def AddCompositionLibrery(librery):
     composerlastname = input("Enter the last name to composer: ")
     nationalitycomposer = input("Enter  the nationality to composer: ")
     periodcomposer = input("Enter the period to composer: ")
-    tipecomposition = input("Enter the tipe composition: ")
+    typecomposition = input("Enter the type composition: ")
     composer = Composer(composername, composerlastname, nationalitycomposer, periodcomposer)
-    composition = Compositions(title, instrumentation,  tipecomposition)
+    composition = Compositions(title, instrumentation,  typecomposition)
     composition.AddComposer(composer)
     librery.AddComposition(composition)
     return librery
